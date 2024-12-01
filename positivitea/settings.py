@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+if os.path.isfile('env.py'):
+    import env
 env_path = os.path.join(os.path.dirname(__file__), 'env.py')
 if os.path.exists(env_path):
     import importlib.util
